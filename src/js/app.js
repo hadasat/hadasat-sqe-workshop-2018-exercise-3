@@ -9,7 +9,6 @@ $(document).ready(function () {
         let parameters = eval(parameter_array);
         let parsedCode = parseCode(codeToParse,parameters);
         let graph_code = make_graph(parsedCode.graph,parsedCode.rode);
-        $('#parsedCode').val(JSON.stringify(graph_code, null, 2));
         let diagram = flowchart.parse(graph_code);
         diagram.drawSVG('diagram');
         diagram.drawSVG('diagram',settings);
